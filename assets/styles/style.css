@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+ 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+ 
+body {
+  height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  background: rgb(158, 243, 245);
+  background: linear-gradient(90deg, rgb(37, 208, 203) 0%, rgb(226, 249, 189) 100%);
+  display: flex;
+  flex-direction: column;
+}
+ 
+header.navbar-container {
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+    padding-block: 1rem;
+    z-index: 999;
+  }
+   
+  header.navbar-container .logo img {
+    width: 150px;
+  }
+   
+  header.navbar-container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+  }
+   
+  header.navbar-container .nav-list li {
+    list-style-type: none;
+  }
+   
+  header.navbar-container .nav-list li a {
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: black;
+    padding: .5rem 1.5rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+  }
+   
+  header.navbar-container .nav-list li:hover a {
+    background-color: #1a7963;
+    color: white;
+  }
+
+  main {
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+    padding: 2rem 4rem;
+    flex: 1;
+
+    align-items: center;
+  }
+   
+  main .content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5rem;
+  }
+   
+  main .content .content-description {
+    flex: 1 1;
+  }
+   
+  main .content .content-description .title {
+    font-size: 3.5rem;
+    margin-block: 1rem;
+  }
+   
+  main .content .content-description p {
+    line-height: 1.7rem;
+    font-size: 1.2rem;
+  }
+
+  main .content .content-description button {
+    padding: .8rem 2.5rem;
+    margin-block-start: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+   
+    border: 3px solid transparent;
+    border-radius: 999px;
+    background-color: #1a7963;
+    cursor: pointer;
+    transition: all .15s ease-in;
+  }
+   
+  main .content .content-description button:hover {
+    border: 3px solid #1a7963;
+    color: #1a7963;
+    background-color: transparent;
+  }
+   
+  main .content .content-image {
+    flex: 1;
+    display: flex;
+  }
+   
+  main .content .content-image img {
+    margin: auto;
+    min-width: 250px;
+    width: 300px;
+  }
+   
+  /* Medium devices (landscape tablets, 768px and down) */
+  @media screen and (max-width: 768px) {
+    header.navbar-container {
+      flex-direction: column;
+    }
+   
+    header.navbar-container .nav-list ul {
+      flex-wrap: wrap;
+      column-gap: .5rem;
+    }
+   
+    main {
+      padding: 1rem 3rem;
+    }
+   
+    main .content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+   
+    main .content .content-description .title {
+      font-size: 3rem;
+    }
+   
+    main .content .content-description p {
+      font-size: 1rem;
+    }
+   
+    main .content .content-image {
+      order: -1;
+    }
+  }
+
+  #isi {
+    background-color: aliceblue;
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+  }
+  
+  aside #profile{
+    padding-top: 5rem;
+  }
+  aside {
+    flex: 1;
+  }
+   
+  h2 {
+    color: #20a2ca;
+  }
+   
+  h3 {
+    color: #2c2f2e;
+  }
+   
+  footer {
+    padding: 20px;
+    color: #fff;
+    background-color: #1c5dbe;
+    text-align: center;
+  }
+   
+  header.navbar-container .logo img {
+    width: 300px;
+    padding-top: 25px;
+  }
+  
+  .jumbotron {
+    font-size: 20px;
+    padding: 60px;
+    background-color: #00c8eb;
+    text-align: center;
+    color: white;
+  }
+   
+  .profile header {
+    text-align: center;
+  }
+   
+  .featured-image {
+    width: 100%;
+    max-height: 300px;
+   
+    object-fit: cover;
+    object-position: center;
+  }
+   
+  .card {
+    box-shadow: 0 2px 8px 2px rgba(28, 27, 27, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+  }
+   
+  aside article{
+    text-align: center;
+  }
+
+  aside article section table{
+    text-align: left;
+    border: 2px;
+    border-style: dashed;
+    border-color: rgb(36, 38, 40);
+  }
+
+  aside article section table tr th{
+    padding-right: 3rem;
+  }
+
+  figure img{
+    width: 200px;
+  }
+  @media screen and (max-width: 1200px) {
+    main {
+      flex-flow: column nowrap;
+    }
+   
+    main aside {
+      align-self: center;
+    }
+  }
+   
+  @media screen and (max-width: 768px) {
+    nav ul {
+      justify-content: center;
+    }
+   
+    main aside {
+      align-self: stretch;
+    }
+  }
+
+  header h2{
+    color: rgb(81, 84, 87);
+  }
